@@ -29,7 +29,6 @@
 
 <form action="settings" method="post" enctype="multipart/form-data"><br />
 	<label for="name">名前</label>
-<<<<<<< HEAD
 	<input name="name" value="${editUser.name}" id="name"/>（名前はあなたの公開プロフィールに表示されます）<br />
 
 	<label for="account">アカウント名</label>

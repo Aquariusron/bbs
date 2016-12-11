@@ -7,7 +7,14 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<title>ユーザー登録</title>
+<<<<<<< HEAD
 	<link href="bbs.css" rel="stylesheet" type="text/css">
+=======
+<<<<<<< HEAD
+=======
+	<link href="./css/style.css" rel="stylesheet" type="text/css">
+>>>>>>> 5d031482e1b8adaf9bead50a126f51124512905d
+>>>>>>> f9fa4c744e7b745aa1b4fe1f30338b9834efdce4
 </head>
 <body>
 <div class="main-contents">
@@ -23,16 +30,39 @@
 	</div>
 	<c:remove var="errorMessages" scope="session"/>
 </c:if>
+<<<<<<< HEAD
+
+
+<form action="signup" method="post"><br />
+	<label for="name">名前</label>
+	<input name="name" id="name"/><br />
+
+	<label for="loginid">アカウントID</label>
+	<input name="loginid" id="loginid"/><br />
+=======
 <form action="signup" method="post"><br />
 	<label for="name">名前</label>
 	<input name="name" id="name" value="${editUser.name}"/><br />
 
 	<label for="loginId">ログインID名</label>
 	<input name="loginId" id="loginId" value="${editUser.loginId}"/><br />
+>>>>>>> 5d031482e1b8adaf9bead50a126f51124512905d
 
 	<label for="password">パスワード</label>
 	<input name="password" type="password" id="password"/> <br />
 
+<<<<<<< HEAD
+	 <select name="branchId">
+			<c:forEach var="branch" items="${branches}">
+				<c:out value="${branches}" />
+			</c:forEach>
+ 		 </select>
+
+	 	<select name="postId">
+			<c:forEach var="post" items="${positions}"></c:forEach>
+	 	 </select>
+ 	 <br>
+=======
 	<label for="password_confirm">パスワードの確認</label>
 	<input name="password_confirm" type="password" id="password_confirm"/> <br />
 
@@ -59,6 +89,7 @@
 
 		</c:forEach>
 	</select>
+>>>>>>> 5d031482e1b8adaf9bead50a126f51124512905d
 
 	<input type="submit" value="登録" /> <br />
 

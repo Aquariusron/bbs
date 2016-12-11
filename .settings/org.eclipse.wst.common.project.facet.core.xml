@@ -2,9 +2,17 @@
 <faceted-project>
   <runtime name="Tomcat7 (Java7)"/>
   <fixed facet="jst.web"/>
+<<<<<<< HEAD
+  <fixed facet="java"/>
+  <fixed facet="wst.jsdt.web"/>
+  <installed facet="wst.jsdt.web" version="1.0"/>
+  <installed facet="jst.web" version="3.0"/>
+  <installed facet="java" version="1.7"/>
+=======
   <fixed facet="wst.jsdt.web"/>
   <fixed facet="java"/>
   <installed facet="java" version="1.7"/>
   <installed facet="jst.web" version="3.0"/>
   <installed facet="wst.jsdt.web" version="1.0"/>
+>>>>>>> 5d031482e1b8adaf9bead50a126f51124512905d
 </faceted-project>

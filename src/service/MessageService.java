@@ -13,6 +13,11 @@ import dao.UserMessageDao;
 
 public class MessageService {
 
+<<<<<<< HEAD
+	private static final int LIMIT_NUM = 1000;
+
+=======
+>>>>>>> 5d031482e1b8adaf9bead50a126f51124512905d
 	public void register(Message message) {
 
 		Connection connection = null;
@@ -34,17 +39,26 @@ public class MessageService {
 		}
 	}
 
+<<<<<<< HEAD
+	public List<UserMessage> getMessage(Integer userId) {
+=======
 
 	private static final int LIMIT_NUM = 1000;
 
 	public List<UserMessage> getMessage() {
+>>>>>>> 5d031482e1b8adaf9bead50a126f51124512905d
 
 		Connection connection = null;
 		try {
 			connection = getConnection();
 
 			UserMessageDao messageDao = new UserMessageDao();
+<<<<<<< HEAD
+			List<UserMessage> ret = messageDao.getUserMessages(connection,
+					userId, LIMIT_NUM);
+=======
 			List<UserMessage> ret = messageDao.getUserMessages(connection, LIMIT_NUM);
+>>>>>>> 5d031482e1b8adaf9bead50a126f51124512905d
 
 			commit(connection);
 
@@ -60,6 +74,8 @@ public class MessageService {
 		}
 	}
 
+<<<<<<< HEAD
+=======
 	public List<UserMessage> getComment() {
 
 		Connection connection = null;
@@ -82,4 +98,5 @@ public class MessageService {
 			close(connection);
 		}
 	}
+>>>>>>> 5d031482e1b8adaf9bead50a126f51124512905d
 }

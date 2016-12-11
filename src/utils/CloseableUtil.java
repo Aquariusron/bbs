@@ -14,9 +14,14 @@ public class CloseableUtil {
 
 	public static void close(Closeable closeable) {
 
+<<<<<<< HEAD
+		if (closeable == null)
+			return;
+=======
 		if (closeable == null) {
 			return;
 		}
+>>>>>>> 5d031482e1b8adaf9bead50a126f51124512905d
 
 		try {
 			closeable.close();
@@ -26,9 +31,14 @@ public class CloseableUtil {
 	}
 
 	public static void close(Connection connection) {
+<<<<<<< HEAD
+		if (connection == null)
+			return;
+=======
 		if (connection == null) {
 			return;
 		}
+>>>>>>> 5d031482e1b8adaf9bead50a126f51124512905d
 		try {
 			connection.close();
 		} catch (SQLException e) {
@@ -37,9 +47,14 @@ public class CloseableUtil {
 	}
 
 	public static void close(Statement statement) {
+<<<<<<< HEAD
+		if (statement == null)
+			return;
+=======
 		if (statement == null) {
 			return;
 		}
+>>>>>>> 5d031482e1b8adaf9bead50a126f51124512905d
 		try {
 			statement.close();
 		} catch (SQLException e) {
@@ -48,9 +63,14 @@ public class CloseableUtil {
 	}
 
 	public static void close(ResultSet rs) {
+<<<<<<< HEAD
+		if (rs == null)
+			return;
+=======
 		if (rs == null) {
 			return;
 		}
+>>>>>>> 5d031482e1b8adaf9bead50a126f51124512905d
 		try {
 			rs.close();
 		} catch (SQLException e) {

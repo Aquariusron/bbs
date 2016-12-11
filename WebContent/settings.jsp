@@ -6,8 +6,17 @@
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<<<<<<< HEAD
+	<title>${loginUser.account}の設定</title>
+	<link href="css/style.css" rel="stylesheet" type="text/css">
+=======
 	<title>${editUser.name}の設定</title>
+<<<<<<< HEAD
 	<link href="bbs.css" rel="stylesheet" type="text/css">
+=======
+	<link href="./css/style.css" rel="stylesheet" type="text/css">
+>>>>>>> 5d031482e1b8adaf9bead50a126f51124512905d
+>>>>>>> f9fa4c744e7b745aa1b4fe1f30338b9834efdce4
 </head>
 <body>
 <div class="main-contents">
@@ -26,6 +35,29 @@
 
 <form action="settings" method="post" enctype="multipart/form-data"><br />
 	<label for="name">名前</label>
+<<<<<<< HEAD
+	<input name="name" value="${editUser.name}" id="name"/>（名前はあなたの公開プロフィールに表示されます）<br />
+
+	<label for="account">アカウント名</label>
+	<input name="account" value="${editUser.account}" />（あなたの公開プロフィール:http://localhost:8080/?account=アカウント名）<br />
+
+	<label for="password">パスワード</label>
+	<input name="password" type="password" id="password"/> <br />
+
+	<label for="email">メールアドレス</label>
+	<input name="email" value="${editUser.email}" id="email"/> <br />
+
+	<label for="description">説明</label>
+	<textarea name="description" cols="35" rows="5" id="description"><c:out value="${editUser.description}" /></textarea> <br />
+
+	<label for="icon">アイコン</label>
+	<input type="file" name="icon" id="icon"> <br />
+
+	<input type="submit" value="登録" /> <br />
+	<a href="./">戻る</a>
+</form>
+<div class="copyright">Copyright(c)Satoshi Kimura</div>
+=======
 	<input name="name" value="${editUser.name}" id="name"/><br />
 
 	<label for="account">ログインID</label>
@@ -63,6 +95,7 @@
 
 </form>
 <div class="copyright">Copyright(c)Akane Yamashita</div>
+>>>>>>> 5d031482e1b8adaf9bead50a126f51124512905d
 </div>
 </body>
 </html>

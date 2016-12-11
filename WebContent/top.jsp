@@ -8,15 +8,15 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>掲示板</title>
-<link href="./css/style.css" rel="stylesheet" type="text/css">
+<link href="bbs.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 <div class = "main-contents">
 <div class="header">
-			<a href="signup">新規登録</a>
-			<a href="newMessage">新規投稿</a>
-			<a href="users">ユーザー管理</a>
-			<a href="login">ログイン</a>
+			<a href="signup">新規登録</a>/
+			<a href="newMessage">新規投稿</a>/
+			<a href="users">ユーザー管理</a>/
+			<a href="login">ログイン</a>/
 			<a href="logout">ログアウト</a>
 </div>
 <br />
@@ -24,16 +24,6 @@
 <div class="profile">
 	<div class="name"><h2><c:out value="${loginUser.name}" /></h2></div>
 </div>
-<br />
-
-	<select name="messages">
-		<c:forEach items="${messages}" var="message">
-		<div class="date"><fmt:formatDate value="${message.insertDate}" pattern="yyyy/MM/dd HH:mm:ss" /></div>
-			<option value="${message.insertDate}" selected><c:out value="${message.insertDate}"></c:out></option>
-		</c:forEach>
-	</select>
-
-<br />
 <c:if test="${ not empty errorMessages }">
 	<div class="errorMessages">
 		<ul>
@@ -53,32 +43,29 @@
 					<span class="name"><c:out value="${message.name}" /></span>
 				</div>
 
-				<div class="subject"><c:out value="${message.subject}" /></div>
-				<div class="category"><c:out value="${message.category}" /></div>
+				<div class="subject"><c:out value="■${message.subject}" /></div>
+				<div class="category"><c:out value=">${message.category}" /></div>
 				<div class="text"><c:out value="${message.text}" /></div>
 				<div class="name"><c:out value="${message.name}" /></div>
 				<div class="date"><fmt:formatDate value="${message.insertDate}" pattern="yyyy/MM/dd HH:mm:ss" /></div>
 			</div>
-
+			<HR width="100%" align="left">
 			<div class="comment">
 				<c:forEach items="${comments}" var="comment">
 					<c:if test="${comment.id == message.id}">
-						<div class="account-name">
-							<span class="name"><c:out value="${message.name}" /></span>
-						</div>
 						<%--これはログインしてるユーザーのIDを表示させるだけなのでいらない
 						<div class="user_id"><c:out value="${loginUser.id}" /></div> --%>
 						<div class="text"><c:out value="${comment.getComment()}" /></div>
-						<%-- <div class="name"><c:out value="${comment.name}" /></div>--%>
-						<div class="date"><fmt:formatDate value="${comment.getInsertDate()}" pattern="yyyy/MM/dd HH:mm:ss" /></div>
+						<div class="date"><fmt:formatDate value="${comment.getInsertDate()}" pattern="yyyy/MM/dd HH:mm:ss" />
+						<c:out value="  ${comment.name}" /></div>
 					</c:if>
 				</c:forEach>
 			</div>
 			<br />
 			<div class="form-area">
-				<form action="comment" method="post">
+				<form action="comment" method="post" style="padding: 20px;">
 					コメント：<br />
-					<TEXTAREA cols="100" rows="5" name="text" ></TEXTAREA>
+					<TEXTAREA cols="100" rows="5" name="text" margin-left="10px";></TEXTAREA>
 						<input type ="hidden" name="message_id" value="${message.id}">
 						<br />
 						<br />
@@ -87,6 +74,7 @@
 				</form>
 			</div>
 	</c:forEach>
+
 	<br />
 	<br />
 </div>

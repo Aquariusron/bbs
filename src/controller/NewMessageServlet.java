@@ -41,10 +41,12 @@ public class NewMessageServlet extends HttpServlet {
 		User user = (User) session.getAttribute("loginUser");
 
 		Message message = new Message();
+		message.setUserId(user.getId());
 		message.setSubject(request.getParameter("subject"));
 		message.setCategory(request.getParameter("category"));
 		message.setText(request.getParameter("text"));
-		message.setUserId(user.getId());
+//		message.setName(user.getName());
+
 
 		if (isValid(request, messages) == true) {
 			new MessageService().register(message);

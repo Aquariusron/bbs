@@ -7,10 +7,12 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<title>ユーザー登録</title>
-	<link href="./css/style.css" rel="stylesheet" type="text/css">
+	<link href="bbs.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 <div class="main-contents">
+<a href="./">戻る</a>
+<br/>
 <c:if test="${ not empty errorMessages }">
 	<div class="errorMessages">
 		<ul>
@@ -59,7 +61,7 @@
 	</select>
 
 	<input type="submit" value="登録" /> <br />
-	<a href="./">戻る</a>
+
 </form>
 <div class="copyright">Copyright(c)Akane Yamashita</div>
 </div>

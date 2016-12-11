@@ -7,11 +7,12 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<title>${editUser.name}の設定</title>
-	<link href="./css/style.css" rel="stylesheet" type="text/css">
+	<link href="bbs.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 <div class="main-contents">
-
+<a href="users">戻る</a>
+<br/>
 <c:if test="${ not empty errorMessages }">
 	<div class="errorMessages">
 		<ul>
@@ -59,7 +60,7 @@
 		</c:forEach>
 	</select>
 	<input type="submit" value="変更" /> <br />
-	<a href="users">戻る</a>
+
 </form>
 <div class="copyright">Copyright(c)Akane Yamashita</div>
 </div>

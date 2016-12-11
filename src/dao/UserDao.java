@@ -57,8 +57,8 @@ public class UserDao {
 				boolean stop = rs.getBoolean("stop");
 				int branchId = rs.getInt("branch_id");
 				int postId = rs.getInt("post_id");
-				Timestamp insertAt = rs.getTimestamp("insert_at");
-				Timestamp updateAt = rs.getTimestamp("update_at");
+//				Timestamp insertAt = rs.getTimestamp("insert_at");
+//				Timestamp updateAt = rs.getTimestamp("update_at");
 
 				User user = new User();
 				user.setId(id);
@@ -67,8 +67,8 @@ public class UserDao {
 				user.setPassword(password);
 				user.setBranchId(branchId);
 				user.setPostId(postId);
-				user.setInsertAt(insertAt);
-				user.setUpdateAt(updateAt);
+//				user.setInsertAt(insertAt);
+//				user.setUpdateAt(updateAt);
 				user.setStop(stop);
 
 				ret.add(user);
@@ -96,8 +96,8 @@ public class UserDao {
 			sql.append(", branch_id");
 			sql.append(", post_id");
 			sql.append(", stop");
-			sql.append(", insert_at");
-			sql.append(", update_at");
+//			sql.append(", insert_at");
+//			sql.append(", update_at");
 			sql.append(") VALUES (");
 			sql.append("?"); // login_id
 			sql.append(", ?"); // password
@@ -105,8 +105,8 @@ public class UserDao {
 			sql.append(", ?"); // branch_id
 			sql.append(", ?"); // post_id
 			sql.append(", true"); // stop
-			sql.append(", CURRENT_TIMESTAMP"); // insert_at
-			sql.append(", CURRENT_TIMESTAMP"); // update_at
+//			sql.append(", CURRENT_TIMESTAMP"); // insert_at
+//			sql.append(", CURRENT_TIMESTAMP"); // update_at
 			sql.append(")");
 
 			ps = connection.prepareStatement(sql.toString());

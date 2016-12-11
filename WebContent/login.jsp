@@ -7,11 +7,12 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<title>ログイン</title>
-	<link href="./css/style.css" rel="stylesheet" type="text/css">
+	<link href="bbs.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 <div class="main-contents">
-
+<a href="./">戻る</a>
+<br />
 <c:if test="${ not empty errorMessages }">
 	<div class="errorMessages">
 		<ul>
@@ -28,12 +29,12 @@
 	<input name="loginId" id="loginId"/> <br />
 
 	<label for="password">パスワード</label>
-	<input name="password" type="password" id="password"/> <br />
-
-
+	<input name="password" type="password" id="password"/>
+	<br />
+	<br />
 	<input type="submit" value="ログイン" /> <br />
-	<a href="./">戻る</a>
 </form>
+
 <div class="copyright">Copyright(c)Akane Yamashita</div>
 </div>
 </body>

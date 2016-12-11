@@ -18,19 +18,19 @@ public class MessageDao {
 			StringBuilder sql = new StringBuilder();
 			sql.append("INSERT INTO messages ( ");
 
-			sql.append("user_id");
-			sql.append(", subject");
+
+			sql.append(" subject");
 			sql.append(", category");
 			sql.append(", text");
-			sql.append(", insert_dt");
-			sql.append(", update_dt");
+			sql.append(", insert_at");
+//			sql.append(", update_at");
 			sql.append(") VALUES (");
 			sql.append(" ?"); // subject
 			sql.append(", ?"); // category
 			sql.append(", ?");// text
 			sql.append(", ?");// user_id
 			sql.append(", CURRENT_TIMESTAMP"); // insert_date
-			sql.append(", CURRENT_TIMESTAMP"); // update_date
+//			sql.append(", CURRENT_TIMESTAMP"); // update_date
 			sql.append(")");
 
 			ps = connection.prepareStatement(sql.toString());

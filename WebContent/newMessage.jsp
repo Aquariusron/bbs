@@ -10,6 +10,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>新規投稿画面</title>
+<link href="bbs.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 <br />
@@ -27,9 +28,9 @@
 </c:if>
 <br />
 <div class="form-area">
-	<form action="newMessage" method="post">
-			件名：<input type="text" name="subject" height="80" width="1" class="tweet-box" value="${message.subject}">(50文字まで)<br />
-			カテゴリー：<input type="text" name="category" height="80" width="1" class="tweet-box" value="${message.category}">(10文字まで)<br />
+	<form action="newMessage" method="post" style="padding: 20px;">
+			件名：<br /><input type="text" name="subject" height="100" width="1" value="${message.subject}">(50文字まで)<br />
+			カテゴリー：<br /><input type="text" name="category" height="80" width="1" value="${message.category}">(10文字まで)<br />
 			本文：<br /><textarea name="text" cols="80" rows="5" class="tweet-box"><c:out value="${message.text}" /></textarea>
 			<br />
 			<input type="submit" value="新規投稿">(1000文字まで)

@@ -11,6 +11,7 @@ public class Message implements Serializable {
 	private String subject;
 	private String category;
 	private String text;
+	private String name;
 	private Date insertDate;
 	private Date updateDate;
 
@@ -51,7 +52,13 @@ public class Message implements Serializable {
 	public void setText(String text) {
 		this.text = text;
 	}
+	public String getName() {
+		return name;
+	}
 
+	public void setName(String name) {
+		this.name = name;
+	}
 	public Date getInsertDate() {
 		return insertDate;
 	}

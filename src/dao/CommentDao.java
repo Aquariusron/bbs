@@ -18,7 +18,7 @@ public class CommentDao {
 		PreparedStatement ps = null;
 		try {
 			StringBuilder sql = new StringBuilder();
-			sql.append("SELECT * FROM user_comment ");
+			sql.append("SELECT * FROM user_comments ");
 			sql.append("ORDER BY insert_at DESC limit " + num);
 
 			ps = connection.prepareStatement(sql.toString());
@@ -40,12 +40,12 @@ public class CommentDao {
 		try {
 			while (rs.next()) {
 				String text = rs.getString("text");
-				String messageId = rs.getString("message_id");
+				String commentId = rs.getString("id");
 				Timestamp insertDate = rs.getTimestamp("insert_at");
 				String name = rs.getString("name");
 
 				Comment comment = new Comment();
-				comment.setMessageId(Integer.parseInt(messageId));
+				comment.setMessageId(Integer.parseInt(commentId));
 				comment.setComment(text);
 				comment.setInsertDate(insertDate);
 				comment.setName(name);
@@ -69,8 +69,8 @@ public class CommentDao {
 			sql.append("text");
 			sql.append(", user_id");
 			sql.append(", message_id");
-			sql.append(", insert_dt");
-			sql.append(", update_dt");
+			sql.append(", insert_at");
+			sql.append(", update_at");
 			sql.append(") VALUES (");
 			sql.append(" ?"); // text
 			sql.append(", ?");// message_id

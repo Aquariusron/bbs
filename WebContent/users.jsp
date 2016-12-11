@@ -8,14 +8,14 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>ユーザー一覧</title>
-<link href="./css/style.css" rel="stylesheet" type="text/css">
+<link href="bbs.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 <div class = "main-contents">
-<div class="header">
-			<a href="./">戻る</a>
-			<a href="signup">新規登録</a>
-</div>
+<left>
+	<a href="./">戻る</a>/
+	<a href="signup">新規登録</a>
+</left>
 <br />
 <br />
 <div class="profile">

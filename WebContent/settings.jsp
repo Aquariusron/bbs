@@ -6,17 +6,11 @@
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<<<<<<< HEAD
 	<title>${loginUser.account}の設定</title>
 	<link href="css/style.css" rel="stylesheet" type="text/css">
-=======
 	<title>${editUser.name}の設定</title>
-<<<<<<< HEAD
 	<link href="bbs.css" rel="stylesheet" type="text/css">
-=======
 	<link href="./css/style.css" rel="stylesheet" type="text/css">
->>>>>>> 5d031482e1b8adaf9bead50a126f51124512905d
->>>>>>> f9fa4c744e7b745aa1b4fe1f30338b9834efdce4
 </head>
 <body>
 <div class="main-contents">
@@ -56,8 +50,6 @@
 	<input type="submit" value="登録" /> <br />
 	<a href="./">戻る</a>
 </form>
-<div class="copyright">Copyright(c)Satoshi Kimura</div>
-=======
 	<input name="name" value="${editUser.name}" id="name"/><br />
 
 	<label for="account">ログインID</label>
@@ -95,7 +87,6 @@
 
 </form>
 <div class="copyright">Copyright(c)Akane Yamashita</div>
->>>>>>> 5d031482e1b8adaf9bead50a126f51124512905d
 </div>
 </body>
 </html>

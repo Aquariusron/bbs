@@ -1,34 +1,3 @@
-<<<<<<< HEAD
-<%@page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
-<%@page isELIgnored="false"%>
-<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<title>簡易Twitter</title>
-	<link href="./css/style.css" rel="stylesheet" type="text/css">
-</head>
-<body>
-<div class="main-contents">
-
-<div class="header">
-
-		<a href="login">ログイン</a>
-		<a href="signup">新規登録</a>
-		<a href="settings">設定</a>
-		<a href="logout">ログアウト</a>
-
-</div>
-
-<c:if test="${ not empty errorMessages }">
-	<div class="errorMessages">
-		<ul>
-			<c:forEach items="${errorMessages}" var="message">
-				<li><c:out value="${message}" />
-=======
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@page isELIgnored = "false"%>
@@ -60,14 +29,11 @@
 		<ul>
 			<c:forEach items="${errorMessages}" var="comment">
 				<li><c:out value="${comment}" />
->>>>>>> 5d031482e1b8adaf9bead50a126f51124512905d
 			</c:forEach>
 		</ul>
 	</div>
 	<c:remove var="errorMessages" scope="session"/>
 </c:if>
-<<<<<<< HEAD
-
 <c:if test="${ not empty user }">
 	<div class="profile">
 
@@ -112,7 +78,6 @@
 </div>
 </body>
 </html>
-=======
 <br />
 <div class="messages">
 	<c:forEach items="${messages}" var="message">
@@ -166,4 +131,4 @@
 </div>
 </body>
 </html>
->>>>>>> 5d031482e1b8adaf9bead50a126f51124512905d
+

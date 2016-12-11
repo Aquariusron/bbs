@@ -43,41 +43,9 @@
 		</div>
 		<div class="account">
 			<c:out value="${user.description}" />
-		</div>
-	</div>
-</c:if>
-
-<div class="form-area">
-	<c:if test="${ not empty loginUser }">
-		<form action="newMessage" method="post">
-			いま、どうしてる？<br />
-			<textarea name="message" cols="100" rows="5" class="tweet-box"></textarea>
-			<br />
-			<input type="submit" value="つぶやく"">（140文字まで）
-		</form>
-	</c:if>
+		</div>	
 </div>
-
-<div class="messages">
-	<c:forEach items="${messages}" var="message">
-		<div class="message-icon">
-			<div class="icon"><a href="./?user_id=${message.userId}"><img src="./icon?user_id=${message.userId}" width="50" height="50"  /></a></div>
-			<div class="message">
-				<div class="account-name">
-					<a href="./?user_id=${message.userId}"><span class="account"><c:out value="${message.account}" /></span></a>
-					<span class="name"><c:out value="${message.name}" /></span>
-				</div>
-				<div class="text"><c:out value="${message.text}" /></div>
-				<div class="date"><fmt:formatDate value="${message.insertDate}" pattern="yyyy/MM/dd HH:mm:ss" /></div>
-			</div>
-		</div>
-	</c:forEach>
-</div>
-
-<div class="copyright">Copyright(c)Akane Yamashita</div>
-</div>
-</body>
-</html>
+</c:if
 <br />
 <div class="messages">
 	<c:forEach items="${messages}" var="message">

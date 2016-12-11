@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> 5d031482e1b8adaf9bead50a126f51124512905d
 package controller;
 
 import java.io.IOException;
@@ -16,6 +19,7 @@ import beans.User;
 import service.LoginService;
 @WebServlet(urlPatterns = { "/login" })
 public class LoginServlet extends HttpServlet {
+<<<<<<< HEAD
     private static final long serialVersionUID = 1L;
 
     @Override
@@ -50,3 +54,41 @@ public class LoginServlet extends HttpServlet {
     }
 
 }
+=======
+	private static final long serialVersionUID = 1L;
+
+	@Override
+	protected void doGet(HttpServletRequest request,
+			HttpServletResponse response) throws IOException, ServletException {
+
+		request.getRequestDispatcher("login.jsp").forward(request, response);
+	}
+
+	@Override
+	protected void doPost(HttpServletRequest request,
+			HttpServletResponse response) throws IOException, ServletException {
+
+		String loginId = request.getParameter("loginId");
+		String password = request.getParameter("password");
+
+		LoginService loginService = new LoginService();
+		User user = loginService.login(loginId, password);
+
+		HttpSession session = request.getSession();
+
+		if (user != null && user.getStop()) {
+
+			session.setAttribute("loginUser", user);
+			response.sendRedirect("./");
+		} else {
+
+			List<String> messages = new ArrayList<String>();
+			messages.add("ログインに失敗しました。");
+			session.setAttribute("errorMessages", messages);
+			response.sendRedirect("login");
+		}
+
+	}
+
+}
+>>>>>>> 5d031482e1b8adaf9bead50a126f51124512905d

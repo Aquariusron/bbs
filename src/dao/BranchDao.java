@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> 5d031482e1b8adaf9bead50a126f51124512905d
 package dao;
 
 import static utils.CloseableUtil.*;
@@ -15,6 +18,7 @@ import exception.SQLRuntimeException;
 
 public class BranchDao {
 
+<<<<<<< HEAD
     public List<Branch> getBranches(Connection connection) {
 
         PreparedStatement ps = null;
@@ -57,3 +61,47 @@ public class BranchDao {
         }
     }
 }
+=======
+	public List<Branch> getBranches(Connection connection) {
+
+		PreparedStatement ps = null;
+		try {
+			String sql = "SELECT * FROM branches";
+
+			ps = connection.prepareStatement(sql);
+
+			ResultSet rs = ps.executeQuery();
+			List<Branch> branchList = toBranchList(rs);
+
+			if (branchList.isEmpty() == true) {
+				return null;
+			} else {
+				return branchList;
+			}
+		} catch (SQLException e) {
+			throw new SQLRuntimeException(e);
+		} finally {
+			close(ps);
+		}
+	}
+
+	private List<Branch> toBranchList(ResultSet rs) throws SQLException {
+
+		List<Branch> ret = new ArrayList<Branch>();
+		try {
+			while (rs.next()) {
+				int id = rs.getInt("id");
+				String name = rs.getString("name");
+
+				Branch branch = new Branch();
+				branch.setId(id);
+				branch.setName(name);
+				ret.add(branch);
+			}
+			return ret;
+		} finally {
+			close(rs);
+		}
+	}
+}
+>>>>>>> 5d031482e1b8adaf9bead50a126f51124512905d

@@ -6,8 +6,13 @@
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<<<<<<< HEAD
 	<title>${loginUser.account}の設定</title>
 	<link href="css/style.css" rel="stylesheet" type="text/css">
+=======
+	<title>${editUser.name}の設定</title>
+	<link href="./css/style.css" rel="stylesheet" type="text/css">
+>>>>>>> 5d031482e1b8adaf9bead50a126f51124512905d
 </head>
 <body>
 <div class="main-contents">
@@ -25,6 +30,7 @@
 
 <form action="settings" method="post" enctype="multipart/form-data"><br />
 	<label for="name">名前</label>
+<<<<<<< HEAD
 	<input name="name" value="${editUser.name}" id="name"/>（名前はあなたの公開プロフィールに表示されます）<br />
 
 	<label for="account">アカウント名</label>
@@ -46,6 +52,45 @@
 	<a href="./">戻る</a>
 </form>
 <div class="copyright">Copyright(c)Satoshi Kimura</div>
+=======
+	<input name="name" value="${editUser.name}" id="name"/><br />
+
+	<label for="account">ログインID</label>
+	<input name="account" value="${editUser.loginId}" /><br />
+
+	<label for="password">パスワード</label>
+	<input name="password" id="password"/> <br />
+	<label for="password">パスワードの確認</label>
+	<input name="password_confirm" id="password"/> <br />
+
+
+	<select name="branchId">
+		<c:forEach items="${branches}" var="branch">
+			<c:if test="${ branch.id == editUser.branchId }">
+				<option value="${editUser.branchId}" selected><c:out value="${branch.name}"></c:out></option>
+			</c:if>
+			<c:if test="${ branch.id != editUser.branchId }">
+				<option value="${editUser.branchId}" ><c:out value="${branch.name}"></c:out></option>
+			</c:if>
+		</c:forEach>
+	</select>
+
+	<select name="positionId">
+		<c:forEach items="${positions}" var="position">
+			<c:if test="${ position.id == editUser.postId }">
+				<option value="${position.id}"selected><c:out value="${position.name}"></c:out></option>
+			</c:if>
+			<c:if test="${ position.id != editUser.postId }">
+				<option value="${position.id}"><c:out value="${position.name}"></c:out></option>
+			</c:if>
+
+		</c:forEach>
+	</select>
+	<input type="submit" value="変更" /> <br />
+	<a href="users">戻る</a>
+</form>
+<div class="copyright">Copyright(c)Akane Yamashita</div>
+>>>>>>> 5d031482e1b8adaf9bead50a126f51124512905d
 </div>
 </body>
 </html>

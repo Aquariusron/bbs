@@ -7,7 +7,11 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<title>ログイン</title>
+<<<<<<< HEAD
 	<link href="css/style.css" rel="stylesheet" type="text/css">
+=======
+	<link href="./css/style.css" rel="stylesheet" type="text/css">
+>>>>>>> 5d031482e1b8adaf9bead50a126f51124512905d
 </head>
 <body>
 <div class="main-contents">
@@ -24,12 +28,18 @@
 </c:if>
 
 <form action="login" method="post"><br />
+<<<<<<< HEAD
 	<label for="accountOrEmail">アカウント名かメールアドレス</label>
 	<input name="accountOrEmail" id="accountOrEmail"/> <br />
+=======
+	<label for="loginId">ログインID</label>
+	<input name="loginId" id="loginId"/> <br />
+>>>>>>> 5d031482e1b8adaf9bead50a126f51124512905d
 
 	<label for="password">パスワード</label>
 	<input name="password" type="password" id="password"/> <br />
 
+<<<<<<< HEAD
 	<input type="submit" value="ログイン" /> <br />
 	<a href="./">戻る</a>
 </form>
@@ -37,3 +47,13 @@
 </div>
 </body>
 </html>
+=======
+
+	<input type="submit" value="ログイン" /> <br />
+	<a href="./">戻る</a>
+</form>
+<div class="copyright">Copyright(c)Akane Yamashita</div>
+</div>
+</body>
+</html>
+>>>>>>> 5d031482e1b8adaf9bead50a126f51124512905d
